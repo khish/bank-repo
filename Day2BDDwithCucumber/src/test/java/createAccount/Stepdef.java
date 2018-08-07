@@ -71,7 +71,7 @@ public class Stepdef {
 	public void create_new_account() throws Throwable {
 		
 		Account account = new Account();
-		account.setAccountNo(1);
+		account.setAccountNo(2);
 		account.setCustomer(customer);
 		account.setOpeningBalance(500);
 		
@@ -83,7 +83,7 @@ public class Stepdef {
 		Mockito.verify(accountDao).addAccount(account1);
 		assertNotNull(account1);
 		assertEquals(openingBalance, account.getOpeningBalance(),0.0);
-		assertEquals(account1.getAccountNo(), 1);
+		assertEquals(account1.getAccountNo(), 2);
 		
 	}
 	
